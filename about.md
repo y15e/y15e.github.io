@@ -4,12 +4,28 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a web developer in Tokyo.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+The domain name "d6er" means d(evelop)er.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Other words which start from "d" and end with "er" are:
+
+d(ream)er
+
+d(riv)er
+
+d(escrib)er
+
+d(estroy)er
+
+d(rumm)er
+
+d(aught)er
+
+d(ang)er
+
+d(ebugg)er
+
+d(own)er
+
+d(rugg)er
