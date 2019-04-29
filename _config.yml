@@ -16,6 +16,6 @@ exclude:
   - Gemfile.lock
 
 disqus:
-  shortname: y15e
+  shortname: d6er
 
 google_analytics: UA-58185705-1
