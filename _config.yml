@@ -1,10 +1,10 @@
-title: blog.y15e.io
-email: y15e@qq.com
+title: y15e development blog
+
 description: >
   Development Blog
-baseurl: ""
+
 url: "https://blog.y15e.io"
-twitter_username: y15e_
+
 github_username: y15e
 
 markdown: kramdown

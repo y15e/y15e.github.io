@@ -3,7 +3,7 @@ layout: post
 title: "Reinstall Jekyll on Arch Linux"
 ---
 
-My desktop pc seems to be broken, so I had to do daily work on my small notebook ([ASUS X102BA](http://www.asus.com/Notebooks_Ultrabooks/X102BA/)). I reinstalled Jekyll on my notebook.
+My desktop pc seems to be broken, so I had to do daily work on my small laptop ([ASUS X102BA](https://www.asus.com/Laptops/X102BA/)). I reinstalled Jekyll on my laptop.
 
 1. Install Ruby.
 
