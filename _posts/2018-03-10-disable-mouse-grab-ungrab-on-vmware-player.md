@@ -2,8 +2,9 @@
 layout: post
 title: "Disable mouse grab/ungrab on VMware player"
 ---
+Add following lines to **%APPDATA%\VMware\preferences.ini** file.
 
-%APPDATA%\VMware\preferences.ini
-
+```
 pref.motionGrab = "FALSE"
 pref.motionUngrab = "FALSE"
+```

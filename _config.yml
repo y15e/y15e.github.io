@@ -1,11 +1,11 @@
 title: d(evelop)er.com
-email: d6er@qq.com
+email: y15e@qq.com
 description: >
   Personal blog of a web developer.
 baseurl: ""
 url: "http://d6er.com"
 twitter_username: d5per
-github_username:  d6er
+github_username:  y15e
 
 markdown: kramdown
 theme: minima
@@ -16,6 +16,6 @@ exclude:
   - Gemfile.lock
 
 disqus:
-  shortname: d6er
+  shortname: y15e
 
 google_analytics: UA-58185705-1
