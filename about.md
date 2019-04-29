@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-I am a senior web engineer living in Tokyo.
+Senior web engineer living in Tokyo.
 
-[My LinkedIn Profile](https://www.linkedin.com/in/y15e/)
+[LinkedIn profile](https://www.linkedin.com/in/y15e/)

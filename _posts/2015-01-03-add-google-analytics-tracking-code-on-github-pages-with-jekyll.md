@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Add Google Analytics Tracking Code On Github Pages With Jekyll"
+title: "Add Google Analytics tracking code on github pages with Jekyll"
 ---
 
-You can embed disqus comment form by following step.
+Google Analytics tracking code can be added with following steps.
 
 1. Get a tracking code from Google Analytics "Tracking Info" section of your PROPERTY.
 

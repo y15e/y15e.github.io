@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Add Disqus Comment Form On Github Pages With Jekyll"
+title: "Add Disqus comment form on github pages with Jekyll"
 ---
 
-You can embed disqus comment form by following step.
+Disqus comment form can be embedded with following steps.
 
-1. Get a "Universal Code" from Disqus admin page.
+1. Get "Universal Code" from Disqus admin page.
 
 2. Put the html code into _includes/disqus.html file.
 
@@ -17,7 +17,7 @@ You can embed disqus comment form by following step.
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'fd3s-github-io'; // required: replace example with your forum shortname
+var disqus_shortname = 'y15e'; // required: replace example with your forum shortname
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {

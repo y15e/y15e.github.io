@@ -1,30 +1,29 @@
 ---
 layout: post
-title: "MyBB Upgrade Error From 1.6.16 To 1.8.3"
+title: "MyBB upgrade error from 1.6.16 to 1.8.3"
 ---
 
-I use MyBB forum software for my personal project.
-Current version is 1.6.16, it is too old so I tried to upgrade to latest 1.8.3.
+I use MyBB forum application in my private project. Current version is 1.6.16, it is too old so I tried to upgrade to the latest 1.8.3.
 
 1. Download the latest MyBB package file.
 
-```
-$ wget http://resources.mybb.com/downloads/mybb_1803.zip
-```
+   ```
+   $ wget http://resources.mybb.com/downloads/mybb_1803.zip
+   ```
 
 2. Extract the zip file and copy to existing directory.
 
-```
-$ cd ./downloaded_directory
-$ unzip mybb_1803.zip
-$ rsync -av ./Upload/ /existsing/mybb/directory/
-```
+   ```
+   $ cd ./downloaded_directory
+   $ unzip mybb_1803.zip
+   $ rsync -av ./Upload/ /existsing/mybb/directory/
+   ```
 
 3. Open the url in browser for upgrade.
 
-```
-http://my-personal-project-hostname/install/upgrade.php
-```
+   ```
+   http://my-personal-project-hostname/install/upgrade.php
+   ```
 
 Then I got following error.
 

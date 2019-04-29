@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "Install Flash Plugin in Chromium on Arch Linux"
+title: "Install Flash plugin in Chromium on Arch Linux"
 ---
 
-You can't use the **flashplugin** package for Chromium browser on Arch Linux.
-Use [chromium-pepper-flash](https://aur.archlinux.org/packages/chromium-pepper-flash/) from AUR instead.
+**flashplugin** package can't be used for Chromium browser on Arch Linux. Use [chromium-pepper-flash](https://aur.archlinux.org/packages/chromium-pepper-flash/) from AUR instead.
 
 ```
 $ wget https://aur.archlinux.org/packages/ch/chromium-pepper-flash/chromium-pepper-flash.tar.gz

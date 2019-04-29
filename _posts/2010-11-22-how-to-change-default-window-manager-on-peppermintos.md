@@ -3,9 +3,9 @@ layout: post
 title: "How to change default window manager on PeppermintOS"
 ---
 
-The default window manager configuration is written in /etc/alternatives/lxdm.conf file.
+The window manager configuration of PeppermintOS is written in **/etc/alternatives/lxdm.conf** file.
 
-You can change default window manager by changing
+The default window manager can be changed by updating
 
 ```
 session=/usr/bin/startpeppermint
@@ -16,5 +16,3 @@ to
 ```
 session=/usr/local/bin/enlightenment_start
 ```
-
-Of course, above is example of my case.

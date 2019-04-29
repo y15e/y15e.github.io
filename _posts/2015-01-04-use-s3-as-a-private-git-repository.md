@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use S3 as a Private Git Repository"
+title: "Use S3 as a private git repository"
 ---
 There are many blog posts on the internet about this topic.
 This is just a note of linux commands.
