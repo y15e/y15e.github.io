@@ -1,11 +1,11 @@
-title: d(evelop)er.com
+title: blog.y15e.io
 email: y15e@qq.com
 description: >
-  Personal blog of a web developer.
+  Development Blog
 baseurl: ""
-url: "http://d6er.com"
-twitter_username: d5per
-github_username:  y15e
+url: "https://blog.y15e.io"
+twitter_username: y15e_
+github_username: y15e
 
 markdown: kramdown
 theme: minima
