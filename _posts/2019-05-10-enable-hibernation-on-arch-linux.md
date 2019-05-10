@@ -1,14 +1,16 @@
 ---
 layout: post
-title: "Enable hibernation"
+title: "Enable hibernation on Arch Linux"
 ---
 
+How to enable hibernation on Arch Linux.
 
-
+* Laptop: [ASUS X102BA](https://www.asus.com/Laptops/X102BA/)
+* Dual boot: Arch Linux LTS and Windows 8
 
 ## Create a swap file
 
-1. Check total memory size
+1. Check total memory size.
 
    ```
    $ free -h
@@ -17,7 +19,7 @@ title: "Enable hibernation"
    Swap:            0B          0B          0B
    ```
 
-2. Create a swap file
+2. Create a swap file.
 
    ```
    $ fallocate -l 2.4G /swapfile
@@ -27,7 +29,7 @@ title: "Enable hibernation"
    no label, UUID=78f84de2-2a78-4922-9ee7-5b0d7bedc590
    ```
 
-3. Enable swap
+3. Enable swap.
 
    ```  
    $ swapon /swapfile
@@ -40,7 +42,7 @@ title: "Enable hibernation"
    Swap:         2.4Gi          0B       2.4Gi
    ```
 
-4. Update fstab
+4. Update `/etc/fstab`.
 
    ```
    /dev/sda5	/	ext4	rw,relatime,data=ordered	0 1
@@ -49,7 +51,7 @@ title: "Enable hibernation"
 
 ## Enable hibernation
 
-1. Check swap file offset
+1. Check the swap file offset.
 
    ```
    $ filefrag -v /swapfile
@@ -62,54 +64,47 @@ title: "Enable hibernation"
    (more lines...)
    ```
 
-2. Add kernel parameters
+2. Add kernel parameters to `/etc/default/grub` file.
 
    ```
    GRUB_CMDLINE_LINUX_DEFAULT="quiet resume=UUID=b196ea21-0496-4ff9-a7b2-97bee7bb1cd0 resume_offset=13469696"
    ```
 
-```
-$ os-prober
-/dev/sda1@/efi/Microsoft/Boot/bootmgfw.efi:Windows Boot Manager:Windows:efi
-$ grub-mkconfig -o /boot/grub/grub.cfg
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-linux-lts
-Found initrd image: /boot/initramfs-linux-lts.img
-Found fallback initrd image(s) in /boot: initramfs-linux-lts-fallback.img
-Found linux image: /boot/vmlinuz-linux
-Found initrd image: /boot/initramfs-linux.img
-Found fallback initrd image(s) in /boot: initramfs-linux-fallback.img
-Found Windows Boot Manager on /dev/sda1@/efi/Microsoft/Boot/bootmgfw.efi
-done
-```
+3. Regenerate `/boot/grub/grub.cfg` file with above kernel parameters.
 
-3. Configure initramfs
+   ```
+   $ os-prober
+   /dev/sda1@/efi/Microsoft/Boot/bootmgfw.efi:Windows Boot Manager:Windows:efi
+   $ grub-mkconfig -o /boot/grub/grub.cfg
+   Generating grub configuration file ...
+   Found linux image: /boot/vmlinuz-linux-lts
+   Found initrd image: /boot/initramfs-linux-lts.img
+   Found fallback initrd image(s) in /boot: initramfs-linux-lts-fallback.img
+   Found linux image: /boot/vmlinuz-linux
+   Found initrd image: /boot/initramfs-linux.img
+   Found fallback initrd image(s) in /boot: initramfs-linux-fallback.img
+   Found Windows Boot Manager on /dev/sda1@/efi/Microsoft/Boot/bootmgfw.efi
+   done
+   ```
 
-   /etc/mkinitcpio.conf
+4. Add "resume" after udev in `/etc/mkinitcpio.conf` file.
+   
    ```
    HOOKS=(base udev resume autodetect modconf block filesystems keyboard fsck)
    ```
    
+5. Regenerate the initramfs.
+
    ```
    $ mkinitcpio -p linux-lts
    ```
 
-4. 
+6. Test hibernation after reboot.
 
    ```
    $ systemctl hibernate
    ```
 
+## Notes
 
-
-
-
-
-## didn't work
-
-https://wiki.archlinux.org/index.php/Swap#Automated
-
-$ sudo pacman -S systemd-swap
-
-$ vi /etc/systemd/swap.conf
-swapfc_enabled=1
+* **systemd-swap** didn't work because hibernation needs a persistent fs blocks.
