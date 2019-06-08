@@ -33,3 +33,9 @@ $ pacman -S xorg-xinput
 $ xinput --list
 $ xinput --list-props 12
 $ xinput --set-prop 12 286 1
+
+$ pacman -S texlive-core texlive-bin texlive-fontsextra
+$ pacman -S pandoc
+$ pacman -S libreoffice-fresh
+$ pacman -S noto-fonts-cjk
+
