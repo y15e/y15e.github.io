@@ -19,6 +19,9 @@ $ mkfs.ext4 /dev/mm~
 
 $ pacstrap
 
+$ pacman -S grub efibootmgr os-prober rsync wpa_supplicant
+
+
 8.
 $ mkdir /efi
 $ mount /dev/mmcblk0p1 /efi
@@ -38,4 +41,8 @@ $ pacman -S texlive-core texlive-bin texlive-fontsextra
 $ pacman -S pandoc
 $ pacman -S libreoffice-fresh
 $ pacman -S noto-fonts-cjk
+
+## Notes
+
+- Boot to firmware (EZ mode): Press F2 key and power on.
 
