@@ -29,18 +29,22 @@ $ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 $ os-prober
 $ grub-mkconfig -o /boot/grub/grub.cfg
 
-9. pip install python-efl
-10. download econnman-1.1
+9. download econnman-1.1
+$ pacman -S python-dbus connman
+$ pip install python-efl
+
 
 $ pacman -S xorg-xinput
-$ xinput --list
-$ xinput --list-props 12
+$ xinput --list | grep Touch
+$ xinput --list-props 12 | Tap
 $ xinput --set-prop 12 286 1
 
 $ pacman -S texlive-core texlive-bin texlive-fontsextra
 $ pacman -S pandoc
 $ pacman -S libreoffice-fresh
 $ pacman -S noto-fonts-cjk
+
+$ pacman -S fuse openntpd pacman-contrib deepin-screenshot code evince
 
 ## Notes
 
