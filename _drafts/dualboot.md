@@ -13,21 +13,33 @@ $ dhcpcd wlo1
 
 6. 
 
-$ mkfs.ext4 /dev/mm~
+$ mkfs.ext4 /dev/mmcblk0p4
+$ mount /dev/mmcblk0p4 /mnt
+$ pacstrap /mnt base
+$ genfstab -U /mnt >> /mnt/etc/fstab
+$ arch-chroot /mnt
 
 7. 
 
-$ pacstrap
-
-$ pacman -S grub efibootmgr os-prober rsync wpa_supplicant
-
-
 8.
+
+$ pacman -S grub efibootmgr os-prober rsync wpa_supplicant arch-install-scripts
 $ mkdir /efi
 $ mount /dev/mmcblk0p1 /efi
 $ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 $ os-prober
 $ grub-mkconfig -o /boot/grub/grub.cfg
+
+## SD card
+
+$ mount /dev/sda2 /usr
+$ mount /dev/sda3 /home
+$ mount /dev/sda4 /var/work
+
+## User
+$ useradd user1
+$ usermod -aG wheel user1
+
 
 9. pip install python-efl
 10. download econnman-1.1
