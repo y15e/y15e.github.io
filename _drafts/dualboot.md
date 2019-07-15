@@ -40,19 +40,21 @@ $ mount /dev/sda4 /var/work
 $ useradd user1
 $ usermod -aG wheel user1
 
-
-9. pip install python-efl
-10. download econnman-1.1
+9. download econnman-1.1
+$ pacman -S python-dbus connman
+$ pip install python-efl
 
 $ pacman -S xorg-xinput
-$ xinput --list
-$ xinput --list-props 12
+$ xinput --list | grep Touch
+$ xinput --list-props 12 | Tap
 $ xinput --set-prop 12 286 1
 
 $ pacman -S texlive-core texlive-bin texlive-fontsextra
 $ pacman -S pandoc
 $ pacman -S libreoffice-fresh
 $ pacman -S noto-fonts-cjk
+
+$ pacman -S fuse openntpd pacman-contrib deepin-screenshot code evince
 
 ## Notes
 
