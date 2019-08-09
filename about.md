@@ -16,4 +16,4 @@ Senior web engineer living in Tokyo.
 
 * [Twitter](https://twitter.com/y15e_)
 
-* [Salesforce Trailhead](https://trailhead.salesforce.com/en/me/y15e)
+* [Salesforce Trailhead](https://trailhead.salesforce.com/me/y15e)
