@@ -15,3 +15,5 @@ Senior web engineer living in Tokyo.
 * [HackerRank](https://www.hackerrank.com/y15e_)
 
 * [Twitter](https://twitter.com/y15e_)
+
+* [Salesforce Trailhead](https://trailhead.salesforce.com/en/me/y15e)
